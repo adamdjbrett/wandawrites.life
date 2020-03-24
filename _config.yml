@@ -19,12 +19,12 @@ plugins:
 - jemoji
 
 # Site settings
-url: 'https://mydomain.com'
+url: 'https://www.wandawrites.life'
 baseurl: ''
-title: 'My website'
-description: 'This is my new website'
+title: 'Wanda Writes Life'
+description: 'Words by Wanda C. Brett'
 permalink: pretty
-logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
+logo: "/images/wanda-writes-life.png"
 
 # Pagination
 paginate: 5
@@ -52,4 +52,4 @@ collections:
     description: "My thoughts and ideas"
     feature_text: |
       Welcome to my blog
-    feature_image: "https://picsum.photos/2560/600?image=866"
+    feature_image: "/images/wanda-banner-typewriter-801921-1920x322.jpg"
