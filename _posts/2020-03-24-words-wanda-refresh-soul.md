@@ -3,7 +3,7 @@ layout: post
 title: "Words from Wanda to Refresh Your Soul"
 categories:
 - Refresh
-feature_image: "/images/sea-4955005_1920.jpg"
+feature_image: "/images/uploads/sea-4955005_1920.jpg"
 ---
 
 God is always with us! As COVID-19 changes the world around us every day, I want you to know that ministering to you is a priority for our VVCC Women’s Ministry Team. Our goal is to help women feel supported, encouraged and connected during this difficult time.
