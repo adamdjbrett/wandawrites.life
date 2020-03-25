@@ -1,7 +1,7 @@
 ---
 title: Refreshing Words
 layout: page
-feature_image: "/images/989-1300x400.jpg"
+feature_image: "/images/thought-catalog-505eectW54k-unsplash.jpg"
 feature_text: |
   ## Wanda C. Brett
 ---
