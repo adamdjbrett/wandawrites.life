@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Wanda C. Brett
+title: About Wanda Cato Brett
 feature_image: "/images/uploads/wanda-banner-typewriter-801921-1920x322.jpg"
 ---
 
