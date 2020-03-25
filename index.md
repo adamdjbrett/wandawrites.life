@@ -1,7 +1,7 @@
 ---
 title: Refreshing Words
 layout: page
-feature_image: "/images/uploads/annie-spratt-bGdiuIyN3Rs-unsplash.1920x400.jpg"
+feature_image: "/images/uploads/thought-catalog-505eectW54k-unsplash.jpg"
 feature_text: |
   ## Wanda Cato Brett
 ---
