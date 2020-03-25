@@ -6,9 +6,6 @@ categories:
 feature_image: "/images/sea-4955005_1920.jpg"
 ---
 
-
-Ladies-
-
 God is always with us! As COVID-19 changes the world around us every day, I want you to know that ministering to you is a priority for our VVCC Women’s Ministry Team. Our goal is to help women feel supported, encouraged and connected during this difficult time.
 
 Pastor Ronda and I were talking this week and we want to provide options for women to receive spiritual help and hope as we navigate our way through this crisis together.
