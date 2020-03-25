@@ -1,7 +1,7 @@
 ---
 title: Refreshing Words
 layout: page
-feature_image: "/images/wanda-banner-typewriter-801921-1920x322.jpg"
+feature_image: "/images/989-1300x400.jpg"
 feature_text: |
   ## Wanda C. Brett
 ---
