@@ -6,4 +6,7 @@ feature_text: |
   ## Wanda C. Brett
 ---
 
-"Words Create Worlds." ~ Rabbi Abraham Joshua Heschel
+_"Words Create Worlds." ~ Rabbi Abraham Joshua Heschel_
+
+
+  {% include post-list.html %}
