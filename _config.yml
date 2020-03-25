@@ -24,7 +24,7 @@ baseurl: ''
 title: 'Wanda Writes Life'
 description: 'Words by Wanda C. Brett'
 permalink: pretty
-logo: "/images/svg/diy.svg"
+logo: "/images/svg/w6.svg"
 
 # Pagination
 paginate: 5
