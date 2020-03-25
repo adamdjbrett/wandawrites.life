@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Wanda C. Brett
+feature_image: "/images/uploads/wanda-banner-typewriter-801921-1920x322.jpg"
 ---
 
 "[Words Create Worlds](https://medium.com/@TanaMSchiewer/alternative-worlds-and-the-words-that-dismantle-them-d5391d1d3ca2)." ~ Rabbi Abraham Joshua Heschel
