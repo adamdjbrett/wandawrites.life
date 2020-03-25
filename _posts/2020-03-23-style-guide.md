@@ -15,7 +15,7 @@ This is a pragraph. Pellentesque habitant [morbi tristique](https://example.com)
 
 Wide image with caption.
 
-{% include image-caption.html imageurl="/assets/images/posts/2018/8.jpg#wide" title="Concrete roads" caption="This is caption" %}
+{% include figure.html imageurl="/assets/images/posts/2018/8.jpg#wide" title="Concrete roads" caption="This is caption" %}
 
 Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:
 
