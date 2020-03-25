@@ -1,9 +1,9 @@
 ---
 title: Refreshing Words
 layout: page
-feature_image: "/images/thought-catalog-505eectW54k-unsplash.jpg"
+feature_image: "/images/annie-spratt-bGdiuIyN3Rs-unsplash.1920x400.jpg"
 feature_text: |
-  ## Wanda C. Brett
+  ## Wanda Cato Brett
 ---
 
 _"Words Create Worlds." ~ Rabbi Abraham Joshua Heschel_
