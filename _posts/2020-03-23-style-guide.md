@@ -7,7 +7,10 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 ---
 
 This is my very first blog post. I haven't written anything yet but I'm sure I have some great stories to tell.
-
+![no-all](/images/svg/wanda-no-all.svg)
+![outline](/images/svg/wanda-outline.svg)
+![responsive](/images/svg/wanda-responsive.svg)
+![yes-all](/images/svg/wanda-yes-all.svg)
 
 This is a pragraph. Pellentesque habitant [morbi tristique](https://example.com) senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.
 
