@@ -1,4 +1,5 @@
-[![Deploy Eleventy to XMIT](https://github.com/adamdjbrett/wandawrites.life/actions/workflows/xmit-deploy.yml/badge.svg)](https://github.com/adamdjbrett/wandawrites.life/actions/workflows/xmit-deploy.yml)
+[![Deploy Eleventy to XMIT](https://github.com/adamdjbrett/wandawrites.life/actions/workflows/xmit-deploy.yml/badge.svg?branch=master)](https://github.com/adamdjbrett/wandawrites.life/actions/workflows/xmit-deploy.yml)
+Deployed to [xmit.co](https://xmit.co)
 
 # wandaWrites.life
 
