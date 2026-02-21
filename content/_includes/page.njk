@@ -1,0 +1,25 @@
+---
+layout: html.njk
+---
+
+{% if feature_image %}
+<div class="hero">
+  <img src="{{ feature_image }}" class="hero-background" alt="" />
+  {% if title %}
+  <div class="hero-body">
+    <center-layout gutters="s-1">
+      <p class="hero-tagline">{{ title }}</p>
+    </center-layout>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
+<main class="siteMain">
+  <center-layout space="s0" gutters="s-1" class="flow">
+    <article class="flow">
+      {% if title %}<h1>{{ title }}</h1>{% endif %}
+      {{ content | safe }}
+    </article>
+  </center-layout>
+</main>

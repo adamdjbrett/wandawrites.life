@@ -1,0 +1,10 @@
+{
+  "primary": [
+    { "text": "Home", "href": "/" },
+    { "text": "About", "href": "/about/" },
+    { "text": "Blog", "href": "/blog/" },
+    { "text": "Search", "href": "/search/" },
+    { "text": "Contact", "href": "/Contact/" }
+  ],
+  "secondary": []
+}

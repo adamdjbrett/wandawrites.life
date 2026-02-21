@@ -1,9 +1,20 @@
-# Official Site of [Wanda C. Brett](http://wandawrites.life)
-## Starter kit for [Alembic](https://alembic.darn.es/) with Netlify CMS
+# wandaWrites.life
 
-This is a very simple starting point if you wish to use Alembic [as a Jekyll theme gem](https://alembic.darn.es/#as-a-jekyll-theme) with Netlify CMS.
+Official site of Wanda C. Brett, built with Eleventy 3.1.2.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-netlifycms-kit&stack=cms)
+## Stack
+- Node 22
+- Eleventy 3.1.2 (ESM config)
+- Liquid templates
+- Luxon date filters
+- Sass build to `/public/assets/css/styles.css`
 
-### Credits
-- Typewriter Image by [Free-Photos](https://pixabay.com/photos/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=801921) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=801921)
+## Project structure
+- `content/` pages and posts
+- `content/_includes/` layouts and partials
+- `public/assets/` css, js, images, and static assets
+- `_site/` generated output
+
+## Commands
+- `npm run build` builds CSS then Eleventy
+- `npm run start` runs local Eleventy dev server

@@ -1,0 +1,21 @@
+---
+layout: html.njk
+---
+
+<div class="hero">
+  <img src="/assets/images/uploads/thought-catalog-505eectW54k-unsplash.jpg" class="hero-background" alt="" />
+  <div class="hero-body">
+    <center-layout gutters="s-1">
+      <p class="hero-tagline">Words by Wanda Cato Brett</p>
+    </center-layout>
+  </div>
+</div>
+
+<main class="siteMain" id="home">
+  <center-layout space="s0" gutters="s-1" class="flow">
+    <article class="flow">
+      {% if title %}<h1>{{ title }}</h1>{% endif %}
+      {{ content | safe }}
+    </article>
+  </center-layout>
+</main>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="{{ excerpt or site.description }}" />
+    <meta name="theme-color" content="#005c6e" />
+    <meta name="msapplication-TileColor" content="#005c6e" />
+    <meta name="msapplication-config" content="/assets/browserconfig.xml" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96x96.png" />
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+  </head>
+  <body>
+    <header class="siteHeader">
+      <a class="siteHeader-brand" href="/">{{ site.title }}</a>
+      <nav class="nav">
+        <ul role="list">
+          {% for item in navigation.primary %}
+          <li><a href="{{ item.href }}">{{ item.text }}</a></li>
+          {% endfor %}
+          <li><a href="/feed/feed.xml">Feed</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {{ content | safe }}
+
+    <footer class="siteFooter">
+      <p>
+        ©️ 2019-{{ "2026-01-01" | readableDate("yyyy") }}, Wanda Brett for Wanda Writes Life.
+        Built with <a href="https://11ty.dev">11ty</a>, Developed by
+        <a href="https://adamdjbrett.com">Adam DJ Brett</a>
+      </p>
+    </footer>
+  </body>
+</html>

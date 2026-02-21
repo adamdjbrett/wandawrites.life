@@ -1,0 +1,27 @@
+---
+permalink: /feed/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/feed/pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>{{ site.title | escape }}</title>
+  <subtitle>{{ site.description | escape }}</subtitle>
+  <id>{{ site.url | escape }}/</id>
+  <updated>{{ "now" | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+  <link rel="self" href="{{ site.url | escape }}/feed/feed.xml" />
+  <link rel="alternate" type="text/html" href="{{ site.url | escape }}/" />
+  <generator>Eleventy</generator>
+  {%- assign posts = collections.post | reverse -%}
+  {%- for post in posts limit: 20 -%}
+  <entry>
+    <title>{{ post.data.title | escape }}</title>
+    <id>{{ site.url | escape }}{{ post.url }}</id>
+    <link href="{{ site.url | escape }}{{ post.url }}" />
+    <updated>{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+    <published>{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+    <summary type="html">{{ post.content | strip_html | strip_newlines | escape }}</summary>
+    <content type="html">{{ post.content | escape }}</content>
+  </entry>
+  {%- endfor -%}
+</feed>

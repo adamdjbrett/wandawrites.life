@@ -1,0 +1,37 @@
+---
+permalink: /humans.txt
+eleventyExcludeFromCollections: true
+---
+/* TEAM */
+Site: Wanda Writes Life
+Owner: Wanda Brett
+Developer: Adam DJ Brett
+
+/* THANKS */
+Original Alembic Jekyll theme by David Darnes: https://alembic.darn.es/
+Thanks to all GitHub authors, co-authors, and contributors who made this site possible.
+
+/* GITHUB AUTHORS */
+{% for person in githubPeople.authors -%}
+- {{ person.name }}{% if person.email %} <{{ person.email }}>{% endif %}
+{% else -%}
+- No git authors detected in this build environment.
+{% endfor %}
+
+/* GITHUB CO-AUTHORS */
+{% for person in githubPeople.coauthors -%}
+- {{ person.name }}{% if person.email %} <{{ person.email }}>{% endif %}
+{% else -%}
+- No co-authors detected in commit trailers.
+{% endfor %}
+
+/* GITHUB CONTRIBUTORS */
+{% for person in githubPeople.contributors -%}
+- {{ person.name }}{% if person.email %} <{{ person.email }}>{% endif %}
+{% else -%}
+- No contributors detected in this build environment.
+{% endfor %}
+
+/* SITE */
+Standards: HTML5, CSS3
+Framework: Eleventy (11ty)
