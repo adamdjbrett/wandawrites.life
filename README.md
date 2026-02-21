@@ -1,6 +1,8 @@
+[![Deploy Eleventy to XMIT](https://github.com/adamdjbrett/wandawrites.life/actions/workflows/xmit-deploy.yml/badge.svg)](https://github.com/adamdjbrett/wandawrites.life/actions/workflows/xmit-deploy.yml)
+
 # wandaWrites.life
 
-Official site of Wanda C. Brett, built with Eleventy 3.1.2.
+Official site of Wanda C. Brett, built with Eleventy 3.1.2. Using a modified version of David Darnes Alembic template for Jekyll.
 
 ## Stack
 - Node 22
