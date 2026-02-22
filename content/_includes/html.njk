@@ -1,6 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
+    {% set preloadHero = "" %}
+    {% if page.url == "/" %}
+      {% set preloadHero = "/assets/images/uploads/thought-catalog-505eectW54k-unsplash.webp" %}
+    {% elif feature_image %}
+      {% set preloadHero = feature_image %}
+    {% endif %}
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     <meta charset="utf8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,6 +14,15 @@
     <meta name="theme-color" content="#005c6e" />
     <meta name="msapplication-TileColor" content="#005c6e" />
     <meta name="msapplication-config" content="/assets/browserconfig.xml" />
+    <style>
+      *,*::before,*::after{box-sizing:border-box}body{margin:0;font-family:Superclarendon,"Bookman Old Style","URW Bookman","URW Bookman L","Georgia Pro",Georgia,serif;font-weight:500;font-size:1.5rem;line-height:1.6;background:#fff;color:#000}.siteHeader{width:min(100% - 2rem,72rem);margin-inline:auto;padding:1rem 0;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #005c6e}.siteHeader-brand,.nav a{color:#005c6e;text-decoration:none}.nav ul{display:flex;gap:1.5rem;margin:0;padding-left:0;list-style:none}.hero{overflow:hidden;display:flex;justify-content:center;align-items:center;max-height:40vh;min-height:220px;position:relative;border-bottom:2px solid #005c6e}.hero-background{width:100%;height:auto;aspect-ratio:1920/400;object-fit:cover}.hero-body{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;color:#005c6e;text-align:center}.siteMain center-layout{display:block;width:min(100% - 2rem,72ch);margin-inline:auto;padding:1.5rem 0}
+    </style>
+    <link rel="preload" href="/assets/style.css" as="style" />
+    <link rel="prefetch" href="/assets/style.css" as="style" />
+    {% if preloadHero %}
+    <link rel="preload" href="{{ preloadHero }}" as="image" fetchpriority="high" />
+    <link rel="prefetch" href="{{ preloadHero }}" as="image" />
+    {% endif %}
     <link rel="stylesheet" href="/assets/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-icon-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
@@ -24,20 +39,30 @@
           {% for item in navigation.primary %}
           <li><a href="{{ item.href }}">{{ item.text }}</a></li>
           {% endfor %}
-          <li><a href="/feed/feed.xml">Feed</a></li>
-          <li><a href="/sitemap.xml">Sitemap</a></li>
         </ul>
       </nav>
     </header>
 
     {{ content | safe }}
 
+    <script>
+      for (const img of document.querySelectorAll("article.flow img")) {
+        if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+        if (!img.hasAttribute("decoding")) img.setAttribute("decoding", "async");
+      }
+    </script>
+
     <footer class="siteFooter">
-      <p>
-        ©️ 2019-{{ "2026-01-01" | readableDate("yyyy") }}, Wanda Brett for Wanda Writes Life.
-        Built with <a href="https://11ty.dev">11ty</a>, Developed by
-        <a href="https://adamdjbrett.com">Adam DJ Brett</a>
-      </p>
+      <div class="siteFooter-row">
+        <p class="siteFooter-copy">
+          ©️ 2019-{{ "2026-01-01" | readableDate("yyyy") }}, Wanda Brett for Wanda Writes Life.
+          Built with <a href="https://11ty.dev">11ty</a>, Developed by
+          <a href="https://adamdjbrett.com">Adam DJ Brett</a>
+        </p>
+        <p class="siteFooter-links">
+          <a href="/feed/feed.xml">Feed</a> | <a href="/sitemap.xml">Sitemap</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>

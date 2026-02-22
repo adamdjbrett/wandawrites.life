@@ -4,7 +4,7 @@ layout: html.njk
 
 {% if feature_image %}
 <div class="hero">
-  <img src="{{ feature_image }}" class="hero-background" alt="" />
+  <img src="{{ feature_image }}" class="hero-background" alt="" width="1920" height="400" fetchpriority="high" loading="eager" decoding="async" />
   {% if title %}
   <div class="hero-body">
     <center-layout gutters="s-1">
