@@ -4,17 +4,19 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20 <23"
+    "node": ">=24",
+    "npm": ">=11.14.0"
   },
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve --quiet"
   },
   "dependencies": {
-    "@11ty/eleventy": "3.1.2",
+    "@11ty/eleventy": "^3.1.6",
     "luxon": "^3.7.2"
   },
   "overrides": {
     "@11ty/recursive-copy": "5.0.0"
-  }
+  },
+  "packageManager": "npm@11.14.0"
 }
