@@ -12,7 +12,7 @@
     "start": "npx @11ty/eleventy --serve --quiet"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy": "4.0.0-alpha.8",
     "luxon": "^3.7.2"
   },
   "overrides": {
