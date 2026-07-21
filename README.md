@@ -3,13 +3,13 @@ Deployed to [xmit.co](https://xmit.co)
 
 # wandaWrites.life
 
-Official site of Wanda C. Brett, built with Eleventy 3.1.2. Using a modified version of David Darnes Alembic template for Jekyll.
+Official site of Wanda C. Brett, built with Eleventy 4.0.0 canary. Using a modified version of David Darnes Alembic template for Jekyll.
 
 ## Stack
-- Node 22
-- Eleventy 3.1.2 (ESM config)
+- Node 24
+- Eleventy 4.0.0 canary (ESM config)
 - Liquid templates
-- Luxon date filters
+- Native JavaScript date filters in Eleventy/Nunjucks
 - Sass build to `/public/assets/css/styles.css`
 
 ## Project structure
@@ -19,5 +19,5 @@ Official site of Wanda C. Brett, built with Eleventy 3.1.2. Using a modified ver
 - `_site/` generated output
 
 ## Commands
-- `npm run build` builds CSS then Eleventy
+- `npm run build` runs an Eleventy production build
 - `npm run start` runs local Eleventy dev server

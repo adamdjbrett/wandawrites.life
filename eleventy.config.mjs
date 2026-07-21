@@ -1,18 +1,53 @@
-import { DateTime } from "luxon";
+const defaultReadableDateFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC",
+  month: "long",
+  day: "numeric",
+  year: "numeric"
+});
+
+function toUtcDate(value) {
+  if (!value) {
+    return null;
+  }
+
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+
+  return date;
+}
+
+function formatUtcDate(date, format) {
+  switch (format) {
+    case "yyyy":
+      return String(date.getUTCFullYear());
+    case "yyyy-LL-dd": {
+      const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+      const day = String(date.getUTCDate()).padStart(2, "0");
+      return `${date.getUTCFullYear()}-${month}-${day}`;
+    }
+    case "LLLL d, yyyy":
+    default:
+      return defaultReadableDateFormatter.format(date);
+  }
+}
 
 export default function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj, format = "LLLL d, yyyy") => {
-    if (!dateObj) {
+    const date = toUtcDate(dateObj);
+    if (!date) {
       return "";
     }
-    return DateTime.fromJSDate(new Date(dateObj), { zone: "utc" }).toFormat(format);
+    return formatUtcDate(date, format);
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    if (!dateObj) {
+    const date = toUtcDate(dateObj);
+    if (!date) {
       return "";
     }
-    return DateTime.fromJSDate(new Date(dateObj), { zone: "utc" }).toFormat("yyyy-LL-dd");
+    return formatUtcDate(date, "yyyy-LL-dd");
   });
 
   eleventyConfig.addPassthroughCopy({ "public/assets": "assets" });

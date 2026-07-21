@@ -12,11 +12,7 @@
     "start": "npx @11ty/eleventy --serve --quiet"
   },
   "dependencies": {
-    "@11ty/eleventy": "4.0.0-alpha.8",
-    "luxon": "^3.7.2"
-  },
-  "overrides": {
-    "@11ty/recursive-copy": "5.0.0"
+    "@11ty/eleventy": "4.0.0-alpha.10"
   },
   "packageManager": "npm@11.14.0"
 }
