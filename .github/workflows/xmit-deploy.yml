@@ -58,19 +58,23 @@ jobs:
           # Use manual input when workflow_dispatch triggers this workflow
           SITE_INPUT="${{ github.event_name == 'workflow_dispatch' && inputs.site || '' }}"
           if [ -n "$SITE_INPUT" ]; then
-            export XMIT_SITE="$SITE_INPUT"
+            XMIT_SITE="$SITE_INPUT"
           fi
           if [ -z "$XMIT_SITE" ]; then
             echo "XMIT site/domain not provided. Set repo Variable 'XMIT_SITE' or pass 'site' input." >&2
             exit 1
           fi
+          # XMIT_SITE is "domain@team"; the public URL is just the domain
+          echo "XMIT_SITE=$XMIT_SITE" >> "$GITHUB_ENV"
+          echo "XMIT_URL=https://${XMIT_SITE%%@*}" >> "$GITHUB_ENV"
           echo "Deploying _site to $XMIT_SITE via XMIT CLI";
           npx -y @xmit.co/xmit "$XMIT_SITE" _site || { echo 'XMIT deploy failed' >&2; exit 1; }
 
       - name: Post-deploy summary
         run: |
-          echo "Deployment attempt finished for $XMIT_SITE";
-          echo "Visit: https://$XMIT_SITE";
+          echo "Deployment finished for $XMIT_SITE";
+          echo "Visit: $XMIT_URL";
+          echo "[$XMIT_URL]($XMIT_URL)" >> "$GITHUB_STEP_SUMMARY"
 
     # Uncomment below for an alternative raw API upload if you have endpoint details
     # steps:
